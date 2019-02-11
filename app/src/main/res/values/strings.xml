@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Tagore Public School</string>
+    <string name="login_id">Login id</string>
+    <string name="password">Password</string>
+    <string name="cancel_result">Upload Result</string>
+    <string name="upload_result">Cancel Result</string>
+    <string name="result_upload">Enter Marks out 0f 100</string>
+    <string name="LOGIN_ID">loginId</string>
+
+    <array name="login_id">
+        <item name="Class_7A">Class 7A</item>
+        <item name="Class_7B">Class 7B</item>
+        <item name="Class_7C">Class 7C</item>
+        <item name="Class 8A">Class 8A</item>
+        <item name="Class_8B">Class 8B</item>
+        <item name="Class_8C">Class 8C</item>
+        <item name="Class_8D">Class 8D</item>
+    </array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="2"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:id="@+id/textViewStudentName"
+            android:text="hello"
+            android:textSize="14sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="hello"
+            android:id="@+id/textViewStudentFather"
+            android:textSize="14sp"/>
+    </LinearLayout>
+   <android.support.design.button.MaterialButton
+       android:layout_width="wrap_content"
+       android:layout_weight="1"
+       android:layout_margin="20dp"
+       app:cornerRadius="8dp"
+       android:id="@+id/buttonEnterMarks"
+       android:textSize="14sp"
+       android:text="Enter Marks.."
+       style="@style/mainTheme"
+       android:textAppearance="@style/Widget.MaterialComponents.Button"
+       android:layout_height="match_parent" />
+
+
+</LinearLayout>

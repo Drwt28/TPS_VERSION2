@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Student.student_marks_activity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/marksToolbar"
+        app:logo="@drawable/ic_chart_bar"
+        app:title="Marks"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimaryDark"
+        app:titleMargins="20dp">
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/marksToolbar"
+            android:layout_height="wrap_content"
+            android:id="@+id/recylerViewMarks">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/marksToolbar"
+        android:layout_height="wrap_content">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/marksLayout"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:text= "@string/result_upload"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:id="@+id/recylerViewEnterMarks">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <android.support.design.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                style="@style/ButtonTheme"
+                android:text="@string/cancel_result"
+                android:id="@+id/uploadmarksButton"/>
+            <android.support.design.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                style="@style/ButtonTheme"
+                android:text="@string/upload_result"
+                android:id="@+id/CancelmarksButton"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    </android.support.v7.widget.CardView>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/marks_uploadid"/>
+</RelativeLayout>

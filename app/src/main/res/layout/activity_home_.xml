@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TeacherActivity.Home_Activity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/actionbar_id"
+
+        app:title="Teacher Pannel"
+        app:logo="@drawable/ic_shield_account_outline_white_36dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimary">
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ResultNameDialog"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@color/Red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textviewTitle"
+                android:text="Exam Name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Exam Name"
+                android:padding="10dp"
+                android:layout_marginTop="40dp"
+                android:id="@+id/ResultNameEditText"
+                android:layout_alignParentLeft="true"
+               android:layout_below="@id/textviewTitle"/>
+            <android.support.design.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                style="@style/mainTheme"
+                app:icon="@drawable/ic_arrow_forward"
+                android:id="@+id/EnterMarksActivityBtn"/>
+            <android.support.design.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                style="@style/mainTheme"
+                app:icon="@drawable/ic_arrow_back"
+
+                android:id="@+id/CancelMarksActivityBtn"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+   <!--card view is used to enter the notice-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+       android:alpha="0.0"
+        android:visibility="gone"
+        android:id="@+id/teacherNoticeLayout"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="8dp">
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Enter Notice"
+              android:textStyle="italic"
+              android:textAlignment="center"
+              android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:maxLines="5"
+                android:minLines="1"
+                android:lines="5"
+                android:textSize="16sp"
+                android:id="@+id/teacherNoticeEditText"
+                android:hint="Today's Notice"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+                <android.support.design.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/ButtonTheme"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="90dp"
+                    android:id="@+id/sendNoticeBtn"
+                    android:textAppearance="@style/Widget.MaterialComponents.Button"
+                    android:text="Send"/>
+                <android.support.design.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    style="@style/ButtonTheme"
+                    android:textSize="14sp"
+                    android:id="@+id/CancelNoticeBtn"
+                    android:textAppearance="@style/Widget.MaterialComponents.Button"
+                    android:text="cancel"/>
+            </LinearLayout >
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <!--end of notice View-->
+
+
+        <LinearLayout
+            android:id="@+id/homelayoutTopId"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/actionbar_id"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="3"
+            >
+
+            <TextView
+                android:id="@+id/textview_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actionbar_id"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:text="Class Teacher: "
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homelayoutBottomId"
+        android:layout_below="@id/homelayoutTopId"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/teacherNoticeButton"
+                style="@style/ButtonTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:text="Notice"
+                android:textAlignment="center"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/teacherRemarkButton"
+                style="@style/ButtonTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:text="Remarks"
+                android:textAlignment="center"
+                android:textAppearance="@style/Widget.MaterialComponents.Button"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/Button_Add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:padding="8dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@id/textview1"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/student_add" />
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:text="Add Student"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/Button_Attendence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@id/textview2"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_hexagram_white_24dp" />
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Attendence"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Button_List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/student_marks" />
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Student List"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Button_Marks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_chart_bar" />
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Marks"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

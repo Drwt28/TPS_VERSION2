@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="mainStartTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="ButtonTheme" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+
+    </style>
+    <style name="AbsentTheme" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="colorAccent">@color/Red</item>
+        <item name="backgroundTint">@color/Red</item>
+
+    </style>
+
+    <style name="PresentTheme" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="colorAccent">@color/green</item>
+        <item name="backgroundTint">@color/green</item>
+
+    </style>
+    <style name="mainTheme" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="rippleColor">@color/colorPrimaryDark</item>
+        <item name ="strokeColor">@color/colorPrimaryDark</item>
+
+
+
+    </style>
+
+
+
+
+</resources>

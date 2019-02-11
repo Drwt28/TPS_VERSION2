@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Student.student_attendence_activity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:title="Attendence Record"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/attendeceToolbar"
+        app:titleMargins="30dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/attendeceToolbar"
+        android:textStyle="bold"
+        android:text="RollNo"
+        android:layout_marginLeft="6dp"
+        android:textSize="14sp"
+        android:id="@+id/textAttendenceSn"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/attendeceToolbar"
+        android:textStyle="bold"
+        android:text="Name"
+        android:textSize="16sp"
+        android:id="@+id/textNameSn"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/attendeceToolbar"
+        android:textStyle="bold"
+        android:text="P/A"
+        android:textSize="16sp"
+        android:id="@+id/textSn"
+        ></TextView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/textAttendenceSn">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+
+       android:layout_alignParentLeft="true"
+        android:layout_below="@id/attendeceToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/attendenceRecyclerView">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Attendence"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:textAppearance="@style/Widget.MaterialComponents.Button"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/takeAttendenceButton"
+        style="@style/ButtonTheme"/>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/attendenceProgressBar"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

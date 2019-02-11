@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Parents.ParentAttendence">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarId"
+        android:background="@color/colorPrimaryDark"
+        app:title="Attendence"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/compactcalendar_view"
+        android:id="@+id/calenderFormat"
+
+        android:orientation="horizontal">
+
+
+        <android.support.design.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:id="@+id/PresentBtn"
+            android:textSize="15sp"
+            android:background="@color/green"
+            style="@style/PresentTheme"
+            android:text="Present"
+            android:textAppearance="@style/Widget.MaterialComponents.Button"/>
+
+
+        <android.support.design.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="Absent"
+            android:textSize="15sp"
+            android:layout_height="match_parent"
+            android:id="@+id/AbsentBtn"
+            android:background="@color/Red"
+            style="@style/AbsentTheme"
+            android:textAppearance="@style/Widget.MaterialComponents.Button"/>
+
+    </LinearLayout>
+
+    <!--//Calendar-->
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="fill_parent"
+        android:paddingRight="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/toolbarId"
+        android:paddingLeft="10dp"
+        android:layout_height="400dp"
+        app:compactCalendarTargetHeight="380dp"
+        app:compactCalendarTextSize="16sp"
+        app:compactCalendarBackgroundColor="@color/White"
+        app:compactCalendarTextColor="@color/colorPrimaryDark"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/White"
+        app:compactCalendarCurrentDayBackgroundColor="@color/green"
+        app:compactCalendarMultiEventIndicatorColor="@color/Blue"/>
+</RelativeLayout>

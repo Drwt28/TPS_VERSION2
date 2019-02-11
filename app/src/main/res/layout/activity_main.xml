@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/main_toolbar"
+        app:logo="@drawable/school_icon"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Tagore Public School"
+        app:subtitle="Welcome"
+        app:titleMargins="8dp">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="match_parent"
+        android:id="@+id/spalahLayout_id">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/splash_logo"
+            android:id="@+id/imageLogoId"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/imageLogoId"
+            android:textSize="35sp"
+            android:textColor="#ffffff"
+            android:id="@+id/textSplash"
+            android:text="Welcome"
+            android:textAlignment="center"/>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/textSplash"/>
+
+    </RelativeLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:id="@+id/Imagecontainer">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:src="@drawable/ic_school_black_24dp"/>-->
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:src="@drawable/ic_add"/>-->
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_parents"/>-->
+
+    <!--</LinearLayout>-->
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/teacherBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:textAppearance="@style/Widget.MaterialComponents.Button"
+        android:text="Teacher"
+        app:icon="@drawable/school_icon"
+        android:layout_alignParentLeft="true"
+        android:alpha="0.1" style="@style/ButtonTheme"
+        android:textSize="24sp"
+        android:textAlignment="center" />
+
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/parentBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:alpha="0.1"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/teacherBtn"
+        android:layout_marginLeft="30dp"
+        android:text=" Parents"
+        app:icon="@drawable/ic_people_black_24dp"
+        style="@style/ButtonTheme"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textAppearance="@style/Widget.MaterialComponents.Button"
+        />
+
+
+</RelativeLayout>

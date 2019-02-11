@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <android.support.v7.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:background="@color/colorPrimaryDark"
+      app:titleMarginStart="26dp"
+      android:id="@+id/studentToolbar"
+      app:title="Student Name"
+      app:subtitle="fatherName">
+
+  </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/studentToolbar"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+
+  <TextView
+      android:layout_weight="1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:padding="10dp"
+      android:id="@+id/TextView_Father_Name"
+      android:textStyle="bold"
+      />
+      <TextView
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="18sp"
+          android:paddingLeft="10dp"
+          android:id="@+id/TextView_TeacherName"
+          android:textStyle="bold"/>
+      <TextView
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="15sp"
+          android:paddingLeft="10dp"
+          android:id="@+id/TextView_DOB"
+          android:textStyle="bold"/>
+
+      <TextView
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="15sp"
+          android:paddingLeft="10dp"
+          android:id="@+id/TextView_Attendence"
+          android:textStyle="bold"/>
+      <TextView
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="18sp"
+          android:padding="6dp"
+          android:id="@+id/TextView_Notice"
+          android:textAlignment="center"
+          android:textStyle="italic"
+          android:text="-NOTICE-"
+          />
+      <TextView
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="18sp"
+          android:paddingLeft="10dp"
+          android:id="@+id/TextView_Remark"
+          android:textStyle="bold"
+          />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      android:layout_weight="2"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"
+     android:layout_marginBottom="20dp"
+      android:orientation="vertical">
+    <!--<android.support.design.button.MaterialButton-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:textSize="18sp"-->
+        <!--style="@style/mainTheme"-->
+        <!--app:icon="@drawable/view_fee"-->
+        <!--android:text="Fee Details"-->
+        <!--android:textAppearance="@style/Widget.MaterialComponents.Button"/>-->
+
+    <android.support.design.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:id="@+id/AttendenceView"
+        style="@style/mainTheme"
+      android:text="View Attendence"
+      app:icon="@drawable/view_attendence"
+      android:textAppearance="@style/Widget.MaterialComponents.Button"/>
+    <android.support.design.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:textSize="18sp"
+        style="@style/mainTheme"
+        android:id="@+id/ResultViewButton"
+        app:icon="@drawable/view_result"
+        android:text="View Result"
+        android:textAppearance="@style/Widget.MaterialComponents.Button"/>
+
+  </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

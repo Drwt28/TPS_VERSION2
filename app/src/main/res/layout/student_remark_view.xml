@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewNameRemark"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        />
+
+
+
+    <EditText
+        android:id="@+id/editTextRemark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/send_remark_button"
+        app:cornerRadius="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        style="@style/mainTheme"
+        android:textAppearance="@style/Widget.MaterialComponents.Button"
+        app:icon="@drawable/ic_send_black_24dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+
+         />
+</LinearLayout>

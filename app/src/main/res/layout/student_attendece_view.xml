@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/attendeceLayout"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/attendencetextview"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/White"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:id="@+id/attendenceStampButton"
+        android:textColor="@color/Blue"
+        android:text="P"
+        />
+
+</RelativeLayout>
+
+
+
+
+

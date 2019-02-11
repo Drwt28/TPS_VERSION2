@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Student.Student_Info_Activity">
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:background="@color/colorPrimaryDark"
+    app:titleMarginTop="10dp"
+    app:title="Stuent"
+    app:titleMarginStart="40dp"
+    android:id="@+id/student_info_toolbar"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+</android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/student_info_toolbar">
+
+
+<LinearLayout
+    android:layout_alignParentLeft="true"
+    android:layout_below="@id/student_info_toolbar"
+    android:layout_width="match_parent"
+    android:id="@+id/linearLayoutstudentList"
+    android:layout_height="match_parent"
+   android:padding="10dp"
+    android:orientation="vertical">
+
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Student Name: "
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:id="@+id/student_name_textView"
+      android:layout_margin="10dp"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Father's Name: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/student_father_textView"
+        android:layout_margin="6dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roll No: "
+        android:textSize="14sp"
+        android:id="@+id/student_rollNo_textView"
+        android:layout_margin="8dp"
+       />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Attendence:"
+        android:textSize="18sp"
+        android:lines="2"
+        android:id="@+id/student_attendence_textView"
+        android:layout_margin="6dp"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today's Notice:\n "
+        android:textAlignment="center"
+        android:textSize="19sp"
+        android:lines="4"
+        android:id="@+id/student_notice_textView"
+        android:layout_margin="10dp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teacher Remark:\n"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:id="@+id/student_remark_textView"
+        android:layout_margin="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:text="Subjects Score\n"
+        android:id="@+id/student_subjectscore_textView"
+        android:layout_margin="6dp"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+    android:id="@+id/recyclerViewSubjects">
+
+</android.support.v7.widget.RecyclerView>
+</LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>
